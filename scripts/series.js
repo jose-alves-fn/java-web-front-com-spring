@@ -120,6 +120,25 @@ function carregarInfoSerie() {
         });
 }
 
+// Função para lidar com a mudança de seleção
+function verificaEscolhaChange() {
+    const valorSelecionado = listaTemporadas.value;
+
+    if (valorSelecionado === 'top') {
+        carregarTopEpisodios();
+    } else {
+        carregarEpisodios();
+    }
+}
+
+// Adiciona ouvinte de evento para o elemento select
+listaTemporadas.addEventListener('change', verificaEscolhaChange);
+
+
+// Carrega as informações da série e as temporadas quando a página carrega
+carregarInfoSerie();
+carregarTemporadas();
+
 // Adiciona ouvinte de evento para o elemento select
 listaTemporadas.addEventListener('change', carregarEpisodios);
 listaTemporadas.addEventListener('change', carregarTopEpisodios);
