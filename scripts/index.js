@@ -80,16 +80,10 @@ function geraSeries() {
         .then(data => {
             criarListaFilmes(elementos.top5, data[0]);
             criarListaFilmes(elementos.lancamentos, data[1]);
-<<<<<<< HEAD
-            criarListaFilmes(elementos.series, data[2]); //.slice(0, 5)
-=======
-            criarListaFilmes(elementos.series, data[2])//.slice(0, 5));
->>>>>>> mao-na-massa
+            criarListaFilmes(elementos.series, data[2])//.slice(0, 5))
         })
         .catch(error => {
             lidarComErro("Ocorreu um erro ao carregar os dados.");
         });
 
 }
-
-
